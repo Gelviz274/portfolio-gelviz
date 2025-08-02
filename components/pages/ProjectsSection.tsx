@@ -2,12 +2,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { SiTailwindcss, SiReact, SiPostgresql } from "react-icons/si";
 import {
-  SiTailwindcss,
-  SiReact,
-  SiPostgresql,
-} from "react-icons/si";
-import { TbBrandFirebase, TbBrandTypescript, TbBrandKotlin } from "react-icons/tb";
+  TbBrandFirebase,
+  TbBrandTypescript,
+  TbBrandKotlin,
+} from "react-icons/tb";
 import { AiOutlinePython } from "react-icons/ai";
 import { RiNextjsLine } from "react-icons/ri";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
@@ -30,58 +30,68 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "../ui/button";
-// Mapping of icon components to their display names
+
 const techNames: Record<string, string> = {
   RiNextjsLine: "Next.js",
   SiTailwindcss: "Tailwind CSS",
-  TypeScriptIcon: "TypeScript",
+  TbBrandTypescript: "TypeScript",
   SiReact: "React",
   TbBrandFirebase: "Firebase",
-  SiPython: "Python",
-  SiDjango: "Django",
+  AiOutlinePython: "Python",
+  DiDjango: "Django",
   SiPostgresql: "PostgreSQL",
   SiFastapi: "FastAPI",
-  SiKotlin: "Kotlin",
+  TbBrandKotlin: "Kotlin",
 };
 
 const projects = [
   {
-    title: "Uni-nova (2025)",
-    description:
-      "Red social educativa para compartir proyectos universitarios. Incluye perfiles, autenticación, likes, comentarios y más.",
-    images: ["/CapUni-nova.png", "/CapUni-novaBL.png"],
-    techs: [RiNextjsLine, SiTailwindcss, TbBrandTypescript, SiReact, TbBrandFirebase],
-    codeUrl: "private",
-    demoUrl: "https://uninova.vercel.app",
-    descriptionDialog:
-      "Uni-nova es una red social educativa creada para impulsar el talento universitario. Permite a estudiantes de todo el país compartir sus proyectos académicos, recibir retroalimentación, conectar con otros estudiantes y descubrir ideas innovadoras clasificadas por universidad, carrera y semestre.\n\nLa plataforma integra funcionalidades como comentarios, guardado de proyectos, me gusta, perfiles personalizados y más. Además, sirve como vitrina para mostrar el trabajo real que se desarrolla en las universidades, promoviendo la colaboración y la inspiración académica.\n\nUni-nova fue galardonado como el Mejor Proyecto de Investigación en los Días ESEIT 2025-2, destacándose por su impacto, escalabilidad y valor para la comunidad universitaria.",
+  title: "Uni-nova (2025)",
+  description:
+    "Red social educativa para compartir proyectos universitarios. Incluye perfiles, autenticación, likes, comentarios y más.",
+  images: ["/CapUni-nova.png", "/CapUni-novaBL.png"],
+  techs: [
+    RiNextjsLine,
+    SiTailwindcss,
+    TbBrandTypescript,
+    SiReact,
+    TbBrandFirebase,
+  ],
+  codeUrl: "private",
+  demoUrl: "https://uninova.vercel.app",
+  descriptionDialog:
+    "Uni-nova es una red social educativa desarrollada con tecnologías modernas como Next.js, TailwindCSS y Firebase, diseñada para potenciar el talento académico de estudiantes universitarios en Bogotá D.C. La plataforma permite publicar proyectos, recibir retroalimentación, interactuar mediante comentarios y likes, así como descubrir ideas clasificadas por universidad, carrera y semestre.\n\nEntre sus principales funcionalidades destacan:\n- Perfiles personalizados\n- Sistema de autenticación seguro\n- Interacción mediante likes, comentarios y guardado de proyectos\n- Exploración de proyectos por filtros académicos\n\nMis funciones:\n- Diseño y desarrollo completo del frontend con Next.js, TypeScript y TailwindCSS\n- Integración de Firebase (Firestore y Auth)\n- Implementación de autenticación con correos y con OAuth como Google, sistema de comentarios y me gusta\n\nUni-nova fue reconocida como Mejor Proyecto de Investigación en los Días ESEIT 2025-1, destacando por su impacto académico, escalabilidad y aporte a la comunidad estudiantil.",
+  ano: "2025",
+},
+{
+  title: "Uni-nova (2024)",
+  description:
+    "Red social educativa para compartir proyectos universitarios. Incluye perfiles, autenticación, likes, comentarios y más.",
+  images: ["/uninovahome.png", "/uninovalogin.png", "/uninovaregister.png"],
+  techs: [AiOutlinePython, DiDjango, SiPostgresql],
+  codeUrl: "https://github.com/Gelviz274/Uni-nova",
+  demoUrl: undefined,
+  descriptionDialog:
+    "Versión inicial de Uni-nova construida con Python, Django y PostgreSQL. Este primer prototipo sentó las bases del proyecto permitiendo funcionalidades esenciales como:\n\n- Registro y autenticación de usuarios\n- Publicación de proyectos\n- Interacción con likes y comentarios\n\nMis funciones:\n- Desarrollo del backend con Django y PostgreSQL\n- Implementación del sistema de usuarios, login, registro y lógica de publicaciones\n- Estructuración de los modelos y endpoints principales de la aplicación\n\nEsta versión representó el punto de partida del desarrollo de una red social académica centrada en la colaboración estudiantil y la visibilidad de proyectos universitarios reales.",
+  ano: "2024",
+},
+{
+  title: "HackerScape",
+  description:
+    "Aplicación interactiva para enseñar seguridad digital: contraseñas seguras, phishing, y más.",
+  images: [
+    "/HackerScape/Home.jpg",
+    "/HackerScape/login.jpg",
+    "/HackerScape/register.jpg",
+  ],
+  techs: [TbBrandKotlin, TbBrandFirebase],
+  codeUrl: "https://github.com/williams1031/proyecto",
+  demoUrl: undefined,
+  descriptionDialog:
+    "HackerScape es una plataforma educativa gamificada enfocada en la enseñanza de ciberseguridad básica. Desarrollada en Kotlin con integración a Firebase, permite a los usuarios aprender mediante retos interactivos y simulaciones de escenarios reales.\n\nFuncionalidades destacadas:\n- Registro y progreso de usuarios\n- Retos prácticos sobre contraseñas, phishing y navegación segura\n- Interfaz amigable para estudiantes y usuarios sin conocimientos técnicos\n\nMis funciones:\n- Configuración completa de Firebase para el proyecto (Authentication, Firestore y Realtime DB)\n- Implementación del sistema de registro y login de usuarios",
+  ano: "2025",
+}
 
-    ano: "2025",
-  },
-  {
-    title: "Uni-nova (2024)",
-    description:
-      "Red social educativa para compartir proyectos universitarios. Incluye perfiles, autenticación, likes, comentarios y más.",
-    images: ["/uninovahome.png", "/uninovalogin.png", "/uninovaregister.png"],
-    techs: [AiOutlinePython, DiDjango, SiPostgresql],  
-    codeUrl: "https://github.com/Gelviz274/Uni-nova",
-    demoUrl: undefined,
-    descriptionDialog:
-      "Red social educativa para compartir proyectos universitarios. Incluye perfiles, autenticación, likes, comentarios y más.",
-    ano: "2024",
-  },
-  {
-    title: "HackerScape",
-    description:
-      "Aplicación interactiva para enseñar seguridad digital: contraseñas seguras, phishing, y más.",
-    images: ["/HackerScape/Home.jpg", "/HackerScape/login.jpg", "/HackerScape/register.jpg"],
-    techs: [TbBrandKotlin, TbBrandFirebase],
-    codeUrl: "https://github.com/Gelviz274/HackerScape",
-    demoUrl: undefined,
-    descriptionDialog:
-      "HackerScape es una plataforma gamificada de ciberseguridad donde los usuarios aprenden y demuestran habilidades técnicas a través de retos interactivos y escenarios reales. ",
-    ano: "2025",
-  },
 ] as const;
 
 function ProjectsSection() {
@@ -108,11 +118,11 @@ function ProjectsSection() {
           className="text-center mb-16"
         >
           <h2 className="font-space-grotesk text-3xl sm:text-4xl font-bold mb-4 text-white">
-          Mis{" "}
-          <span className="bg-gradient-to-r from-[#00BFFF] to-[#8A2BE2] bg-clip-text text-transparent">
-            Proyectos
-          </span>
-        </h2>
+            Mis{" "}
+            <span className="bg-gradient-to-r from-[#00BFFF] to-[#8A2BE2] bg-clip-text text-transparent">
+              Proyectos
+            </span>
+          </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Explora mis proyectos más recientes y descubre mi enfoque en el
             desarrollo de soluciones innovadoras.
@@ -237,7 +247,7 @@ function ProjectsSection() {
                             </Carousel>
                           </div>
                         </div>
-                        
+
                         {/* INFORMACIÓN DEBAJO DEL CARRUSEL */}
                         <div className="flex flex-col w-full gap-6">
                           {/* Descripción */}

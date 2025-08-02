@@ -69,11 +69,13 @@ function HeroSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Soy estudiante de Ingeniería Informática con un fuerte interés en
-              la tecnología, especialmente en áreas como la inteligencia
-              artificial y el análisis de datos. Actualmente lidero el
-              desarrollo de Uni-nova, una plataforma educativa enfocada en
-              compartir y descubrir proyectos universitarios innovadores.
+              Soy estudiante de Ingeniería Informática apasionado por la
+              tecnología y el desarrollo de soluciones que generen impacto real.
+              Me interesan especialmente áreas como la inteligencia artificial,
+              el análisis de datos y la creación de productos digitales que
+              mejoren la vida de las personas. Me considero autodidacta, curioso
+              y orientado a la innovación, siempre en búsqueda de aprender,
+              experimentar y crecer como desarrollador.
             </motion.p>
           </div>
 
