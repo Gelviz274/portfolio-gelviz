@@ -107,9 +107,12 @@ function ProjectsSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">
-            Mis Proyectos
-          </h2>
+          <h2 className="font-space-grotesk text-3xl sm:text-4xl font-bold mb-4 text-white">
+          Mis{" "}
+          <span className="bg-gradient-to-r from-[#00BFFF] to-[#8A2BE2] bg-clip-text text-transparent">
+            Proyectos
+          </span>
+        </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             Explora mis proyectos más recientes y descubre mi enfoque en el
             desarrollo de soluciones innovadoras.

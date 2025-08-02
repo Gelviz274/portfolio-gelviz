@@ -51,7 +51,7 @@ DesarrolloWeb() {
             {tecnologiasWeb.map((tecnologia) => (
               <CarouselItem
                 key={tecnologia.nombre}
-                className="flex justify-center items-center md:basis-1/2 lg:basis-1/4"
+                className="flex justify-center basis-1/3 items-center md:basis-1/4 "
               >
                 <div className="flex flex-col items-center justify-center w-28 h-28 bg-[#131313] rounded-2xl shadow-md">
                   <tecnologia.icono className={`text-5xl text-morado`} />

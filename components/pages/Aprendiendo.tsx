@@ -61,7 +61,7 @@ function OrbitingTool({ icon: Icon, name, startAngle }: { icon: typeof AiOutline
 
 function Aprendiendo() {
   return (
-    <PixelCard className="relative w-full h-full p-6 overflow-hidden" variant="morado">
+    <PixelCard className="relative w-full h-96 p-6 overflow-hidden" variant="morado">
       {/* Círculo central de enfoque */}
       <motion.div
         initial={{ scale: 0.8, opacity: 0 }}

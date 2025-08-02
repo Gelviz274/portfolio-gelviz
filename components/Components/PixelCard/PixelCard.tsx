@@ -250,40 +250,35 @@ export default function PixelCard({
     pixelsRef.current = pxs;
   };
 
-  const doAnimate = (fnName: keyof Pixel) => {
-    animationRef.current = requestAnimationFrame(() => doAnimate(fnName));
-    const timeNow = performance.now();
-    const timePassed = timeNow - timePreviousRef.current;
-    const timeInterval = 1000 / 60;
+ const doAnimate = (fnName: "appear" | "disappear") => {
+  animationRef.current = requestAnimationFrame(() => doAnimate(fnName));
+  const timeNow = performance.now();
+  const timePassed = timeNow - timePreviousRef.current;
+  const timeInterval = 1000 / 60;
 
-    if (timePassed < timeInterval) return;
-    timePreviousRef.current = timeNow - (timePassed % timeInterval);
+  if (timePassed < timeInterval) return;
+  timePreviousRef.current = timeNow - (timePassed % timeInterval);
 
-    const ctx = canvasRef.current?.getContext("2d");
-    if (!ctx || !canvasRef.current) return;
+  const ctx = canvasRef.current?.getContext("2d");
+  if (!ctx || !canvasRef.current) return;
 
-    ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
+  ctx.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);
 
-    let allIdle = true;
-    for (let i = 0; i < pixelsRef.current.length; i++) {
-      const pixel = pixelsRef.current[i];
-      const fn = pixel[fnName];
-
-      if (typeof fn === "function") {
-        
-      }
-
-      if (!pixel.isIdle) {
-        allIdle = false;
-      }
+  let allIdle = true;
+  for (let i = 0; i < pixelsRef.current.length; i++) {
+    const pixel = pixelsRef.current[i];
+    pixel[fnName](); // Llama a pixel.appear() o pixel.disappear()
+    if (!pixel.isIdle) {
+      allIdle = false;
     }
+  }
 
-    if (allIdle) {
-      cancelAnimationFrame(animationRef.current);
-    }
-  };
+  if (allIdle) {
+    cancelAnimationFrame(animationRef.current);
+  }
+};
 
-  const handleAnimation = (name: keyof Pixel) => {
+  const handleAnimation = (name: "appear" | "disappear") => {
     if (animationRef.current !== null) {
       cancelAnimationFrame(animationRef.current);
     }
@@ -321,7 +316,7 @@ export default function PixelCard({
   return (
     <div
       ref={containerRef}
-      className={`h-full w-full relative overflow-hidden grid place-items-center border border-[#27272a] rounded-[25px] isolate transition-colors duration-200 ease-[cubic-bezier(0.5,1,0.89,1)] select-none ${className}`}
+      className={`h-96 w-full relative overflow-hidden grid place-items-center border border-[#27272a] rounded-[25px] isolate transition-colors duration-200 ease-[cubic-bezier(0.5,1,0.89,1)] select-none ${className}`}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       onFocus={finalNoFocus ? undefined : onFocus}

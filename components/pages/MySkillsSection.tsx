@@ -11,7 +11,7 @@ import Aprendiendo from "./Aprendiendo";
 
 export default function MySkilsSection() {
   return (
-    <section className="bg-black py-20 flex flex-col items-center" id="skills">
+    <section className="bg-black py-20 px-5 flex flex-col items-center" id="skills">
       <div className="reveal-up text-center ">
         <h2 className="font-space-grotesk text-3xl sm:text-4xl font-bold mb-4 text-white">
           Mis{" "}
