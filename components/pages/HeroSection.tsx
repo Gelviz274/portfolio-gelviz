@@ -26,7 +26,7 @@ function HeroSection() {
       </div>
 
       <div className="relative z-10 w-full max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center justify-items-center">
-        <div className="relative space-y-6">
+        <div className="relative space-y-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -40,9 +40,9 @@ function HeroSection() {
               className="font-semibold"
             />
           </motion.div>
-          <div className="space-y-6">
+          <div className="space-y-4">
             <motion.h1
-              className="font-space-grotesk text-4xl sm:text-5xl lg:text-5xl font-bold leading-tight text-start"
+              className="font-space-grotesk text-3xl sm:text-5xl lg:text-5xl font-bold leading-tight text-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
@@ -54,7 +54,7 @@ function HeroSection() {
                 Soy Juan David Gelviz
               </span>
               <motion.span
-                className="block text-2xl sm:text-3xl lg:text-3xl font-normal mt-4 bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text text-transparent"
+                className="block text-xl sm:text-3xl lg:text-3xl font-normal mt-4 bg-gradient-to-r from-gray-400 to-gray-300 bg-clip-text text-transparent"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -64,7 +64,7 @@ function HeroSection() {
             </motion.h1>
 
             <motion.p
-              className="text-lg sm:text-xl text-gray-400 max-w-2xl leading-relaxed text-start font-space-grotesk"
+              className="text-md sm:text-xl text-gray-400 max-w-2xl leading-relaxed text-start font-space-grotesk"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}

@@ -31,70 +31,66 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "../ui/button";
 
-const techNames: Record<string, string> = {
-  RiNextjsLine: "Next.js",
-  SiTailwindcss: "Tailwind CSS",
-  TbBrandTypescript: "TypeScript",
-  SiReact: "React",
-  TbBrandFirebase: "Firebase",
-  AiOutlinePython: "Python",
-  DiDjango: "Django",
-  SiPostgresql: "PostgreSQL",
-  SiFastapi: "FastAPI",
-  TbBrandKotlin: "Kotlin",
-};
+
 
 const projects = [
   {
-  title: "Uni-nova (2025)",
-  description:
-    "Red social educativa para compartir proyectos universitarios. Incluye perfiles, autenticación, likes, comentarios y más.",
-  images: ["/CapUni-nova.png", "/CapUni-novaBL.png"],
-  techs: [
-    RiNextjsLine,
-    SiTailwindcss,
-    TbBrandTypescript,
-    SiReact,
-    TbBrandFirebase,
-  ],
-  codeUrl: "private",
-  demoUrl: "https://uninova.vercel.app",
-  descriptionDialog:
-    "Uni-nova es una red social educativa desarrollada con tecnologías modernas como Next.js, TailwindCSS y Firebase, diseñada para potenciar el talento académico de estudiantes universitarios en Bogotá D.C. La plataforma permite publicar proyectos, recibir retroalimentación, interactuar mediante comentarios y likes, así como descubrir ideas clasificadas por universidad, carrera y semestre.\n\nEntre sus principales funcionalidades destacan:\n- Perfiles personalizados\n- Sistema de autenticación seguro\n- Interacción mediante likes, comentarios y guardado de proyectos\n- Exploración de proyectos por filtros académicos\n\nMis funciones:\n- Diseño y desarrollo completo del frontend con Next.js, TypeScript y TailwindCSS\n- Integración de Firebase (Firestore y Auth)\n- Implementación de autenticación con correos y con OAuth como Google, sistema de comentarios y me gusta\n\nUni-nova fue reconocida como Mejor Proyecto de Investigación en los Días ESEIT 2025-1, destacando por su impacto académico, escalabilidad y aporte a la comunidad estudiantil.",
-  ano: "2025",
-},
-{
-  title: "Uni-nova (2024)",
-  description:
-    "Red social educativa para compartir proyectos universitarios. Incluye perfiles, autenticación, likes, comentarios y más.",
-  images: ["/uninovahome.png", "/uninovalogin.png", "/uninovaregister.png"],
-  techs: [AiOutlinePython, DiDjango, SiPostgresql],
-  codeUrl: "https://github.com/Gelviz274/Uni-nova",
-  demoUrl: undefined,
-  descriptionDialog:
-    "Versión inicial de Uni-nova construida con Python, Django y PostgreSQL. Este primer prototipo sentó las bases del proyecto permitiendo funcionalidades esenciales como:\n\n- Registro y autenticación de usuarios\n- Publicación de proyectos\n- Interacción con likes y comentarios\n\nMis funciones:\n- Desarrollo del backend con Django y PostgreSQL\n- Implementación del sistema de usuarios, login, registro y lógica de publicaciones\n- Estructuración de los modelos y endpoints principales de la aplicación\n\nEsta versión representó el punto de partida del desarrollo de una red social académica centrada en la colaboración estudiantil y la visibilidad de proyectos universitarios reales.",
-  ano: "2024",
-},
-{
-  title: "HackerScape",
-  description:
-    "Aplicación interactiva para enseñar seguridad digital: contraseñas seguras, phishing, y más.",
-  images: [
-    "/HackerScape/Home.jpg",
-    "/HackerScape/login.jpg",
-    "/HackerScape/register.jpg",
-  ],
-  techs: [TbBrandKotlin, TbBrandFirebase],
-  codeUrl: "https://github.com/williams1031/proyecto",
-  demoUrl: undefined,
-  descriptionDialog:
-    "HackerScape es una plataforma educativa gamificada enfocada en la enseñanza de ciberseguridad básica. Desarrollada en Kotlin con integración a Firebase, permite a los usuarios aprender mediante retos interactivos y simulaciones de escenarios reales.\n\nFuncionalidades destacadas:\n- Registro y progreso de usuarios\n- Retos prácticos sobre contraseñas, phishing y navegación segura\n- Interfaz amigable para estudiantes y usuarios sin conocimientos técnicos\n\nMis funciones:\n- Configuración completa de Firebase para el proyecto (Authentication, Firestore y Realtime DB)\n- Implementación del sistema de registro y login de usuarios",
-  ano: "2025",
-}
-
+    title: "Uni-nova (2025)",
+    description:
+      "Red social educativa para compartir proyectos universitarios. Incluye perfiles, autenticación, likes, comentarios y más.",
+    images: ["/CapUni-nova.png", "/CapUni-novaBL.png"],
+    techs: [
+      { icon: RiNextjsLine, name: "Next.js" },
+      { icon: SiTailwindcss, name: "Tailwind CSS" },
+      { icon: TbBrandTypescript, name: "TypeScript" },
+      { icon: SiReact, name: "React" },
+      { icon: TbBrandFirebase, name: "Firebase" },
+    ],
+    codeUrl: "private",
+    demoUrl: "https://uninova.vercel.app",
+    descriptionDialog:
+      "Uni-nova es una red social educativa desarrollada con tecnologías modernas como Next.js, TailwindCSS y Firebase, diseñada para potenciar el talento académico de estudiantes universitarios en Bogotá D.C. La plataforma permite publicar proyectos, recibir retroalimentación, interactuar mediante comentarios y likes, así como descubrir ideas clasificadas por universidad, carrera y semestre.\n\nEntre sus principales funcionalidades destacan:\n- Perfiles personalizados\n- Sistema de autenticación seguro\n- Interacción mediante likes, comentarios y guardado de proyectos\n- Exploración de proyectos por filtros académicos\n\nMis funciones:\n- Diseño y desarrollo completo del frontend con Next.js, TypeScript y TailwindCSS\n- Integración de Firebase (Firestore y Auth)\n- Implementación de autenticación con correos y con OAuth como Google, sistema de comentarios y me gusta\n\nUni-nova fue reconocida como Mejor Proyecto de Investigación en los Días ESEIT 2025-1, destacando por su impacto académico, escalabilidad y aporte a la comunidad estudiantil.",
+    ano: "2025",
+  },
+  {
+    title: "Uni-nova (2024)",
+    description:
+      "Red social educativa para compartir proyectos universitarios. Incluye perfiles, autenticación, likes, comentarios y más.",
+    images: ["/uninovahome.png", "/uninovalogin.png", "/uninovaregister.png"],
+    techs: [
+      { icon: AiOutlinePython, name: "Python" },
+      { icon: DiDjango, name: "Django" },
+      { icon: SiPostgresql, name: "PostgreSQL" },
+    ],
+    codeUrl: "https://github.com/Gelviz274/Uni-nova",
+    demoUrl: undefined,
+    descriptionDialog:
+      "Versión inicial de Uni-nova construida con Python, Django y PostgreSQL. Este primer prototipo sentó las bases del proyecto permitiendo funcionalidades esenciales como:\n\n- Registro y autenticación de usuarios\n- Publicación de proyectos\n- Interacción con likes y comentarios\n\nMis funciones:\n- Desarrollo del backend con Django y PostgreSQL\n- Implementación del sistema de usuarios, login, registro y lógica de publicaciones\n- Estructuración de los modelos y endpoints principales de la aplicación\n\nEsta versión representó el punto de partida del desarrollo de una red social académica centrada en la colaboración estudiantil y la visibilidad de proyectos universitarios reales.",
+    ano: "2024",
+  },
+  {
+    title: "HackerScape",
+    description:
+      "Aplicación interactiva para enseñar seguridad digital: contraseñas seguras, phishing, y más.",
+    images: [
+      "/HackerScape/Home.jpg",
+      "/HackerScape/login.jpg",
+      "/HackerScape/register.jpg",
+    ],
+    techs: [
+      { icon: TbBrandKotlin, name: "Kotlin" },
+      { icon: TbBrandFirebase, name: "Firebase" },
+    ],
+    codeUrl: "https://github.com/williams1031/proyecto",
+    demoUrl: undefined,
+    descriptionDialog:
+      "HackerScape es una plataforma educativa gamificada enfocada en la enseñanza de ciberseguridad básica. Desarrollada en Kotlin con integración a Firebase, permite a los usuarios aprender mediante retos interactivos y simulaciones de escenarios reales.\n\nFuncionalidades destacadas:\n- Registro y progreso de usuarios\n- Retos prácticos sobre contraseñas, phishing y navegación segura\n- Interfaz amigable para estudiantes y usuarios sin conocimientos técnicos\n\nMis funciones:\n- Configuración completa de Firebase para el proyecto (Authentication, Firestore y Realtime DB)\n- Implementación del sistema de registro y login de usuarios",
+    ano: "2025",
+  }
 ] as const;
 
 function ProjectsSection() {
+
   // Create a new plugin instance for each carousel
   const createAutoplayPlugin = () =>
     Autoplay({ delay: 4000, stopOnInteraction: true });
@@ -168,7 +164,7 @@ function ProjectsSection() {
                 <p className="text-gray-300 text-sm mb-4">{proj.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {proj.techs.map((Icon, idx) => (
+                  {proj.techs.map(({ icon: Icon }, idx) => (
                     <Icon key={idx} className="text-morado text-xl" />
                   ))}
                 </div>
@@ -273,21 +269,15 @@ function ProjectsSection() {
                               Tecnologías Usadas
                             </h3>
                             <div className="flex flex-wrap gap-3">
-                              {proj.techs.map((Tech, idx) => {
-                                const techName = Tech.name || "";
-                                return (
-                                  <div
-                                    key={idx}
-                                    className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-sm text-white/90"
-                                  >
-                                    <Tech className="w-4 h-4 text-morado" />
-                                    <span>
-                                      {techNames[techName] ||
-                                        techName.replace("Si", "")}
-                                    </span>
-                                  </div>
-                                );
-                              })}
+                              {proj.techs.map(({ icon: Tech, name }, idx) => (
+                                <div
+                                  key={idx}
+                                  className="flex items-center gap-2 bg-white/5 border border-white/10 px-3 py-1.5 rounded-full text-sm text-white/90"
+                                >
+                                  <Tech className="w-4 h-4 text-morado" />
+                                  <span>{name}</span>
+                                </div>
+                              ))}
                             </div>
                           </div>
 
