@@ -5,9 +5,9 @@ import FloatingTech from "@/components/BentoGrid/tecflotantes";
 import DesarrolloWeb from "@/components/BentoGrid/DesarrolloWeb";
 // Importacion de iconos
 
-import HerrameietasYDevOps from "./HerrameietasYDevOps";
-import VisualizacionDeDatos from "./VisualizacionDeDatos";
-import Aprendiendo from "./Aprendiendo";
+import HerrameietasYDevOps from "@/components/BentoGrid/HerrameietasYDevOps";
+import VisualizacionDeDatos from "@/components/BentoGrid/VisualizacionDeDatos";
+import Aprendiendo from "@/components/BentoGrid/Aprendiendo";
 
 export default function MySkilsSection() {
   return (

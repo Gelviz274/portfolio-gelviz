@@ -31,14 +31,12 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "../ui/button";
 
-
-
 const projects = [
   {
     title: "Uni-nova (2025)",
     description:
       "Red social educativa para compartir proyectos universitarios. Incluye perfiles, autenticación, likes, comentarios y más.",
-    images: ["/CapUni-nova.png", "/CapUni-novaBL.png"],
+    images: ["/Uni-nova/CapUni-nova.png", "/Uni-nova/CapUni-novaBL.png", "/Uni-nova/userpage.png", "/Uni-nova/userpagew.png", "/Uni-nova/detallesproject.png", "/Uni-nova/detallesprojectw.png"],
     techs: [
       { icon: RiNextjsLine, name: "Next.js" },
       { icon: SiTailwindcss, name: "Tailwind CSS" },
@@ -76,6 +74,9 @@ const projects = [
       "/HackerScape/Home.jpg",
       "/HackerScape/login.jpg",
       "/HackerScape/register.jpg",
+      "/HackerScape/nivel1.jpg",
+      "/HackerScape/nivel2.jpg",
+      "/HackerScape/finish.jpg",
     ],
     techs: [
       { icon: TbBrandKotlin, name: "Kotlin" },
@@ -86,14 +87,13 @@ const projects = [
     descriptionDialog:
       "HackerScape es una plataforma educativa gamificada enfocada en la enseñanza de ciberseguridad básica. Desarrollada en Kotlin con integración a Firebase, permite a los usuarios aprender mediante retos interactivos y simulaciones de escenarios reales.\n\nFuncionalidades destacadas:\n- Registro y progreso de usuarios\n- Retos prácticos sobre contraseñas, phishing y navegación segura\n- Interfaz amigable para estudiantes y usuarios sin conocimientos técnicos\n\nMis funciones:\n- Configuración completa de Firebase para el proyecto (Authentication, Firestore y Realtime DB)\n- Implementación del sistema de registro y login de usuarios",
     ano: "2025",
-  }
+  },
 ] as const;
 
 function ProjectsSection() {
-
   // Create a new plugin instance for each carousel
   const createAutoplayPlugin = () =>
-    Autoplay({ delay: 4000, stopOnInteraction: true });
+    Autoplay({ delay: 6000, stopOnInteraction: true });
 
   return (
     <section
